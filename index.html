@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vivek Jha | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio website with skills, education, certifications, projects, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Go to home">
+        <span class="logo">VJ</span>
+        <span>Vivek Jha-Full-Stack Developer |Python | Node | SQL</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙 <span class="hide-sm">Theme</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container grid">
+      <div>
+        <span class="badge">Open to Frontend/Backend/Full‑Stack Roles</span>
+        <h1 class="title">Hi, I'm <span style="color:var(--brand)">Vivek jha</span>— passionate about building responsive, powerful, and delightful web experiences.</h1>
+        <p class="subtitle">Full‑stack developer focused on responsive UI, reliable APIs, and clean SQL. I enjoy shipping end‑to‑end features and collaborating across design & product.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="card" aria-hidden="true">
+        <h3 style="margin:0 0 .6rem">At a Glance</h3>
+        <div class="skill">
+          <span>Frontend</span>
+          <span>JS,React,HTML,CSS,Tailwind</span>
+        </div>
+        <div class="bar"><span style="width:90%"></span></div>
+        <div class="skill">
+          <span>Backend</span>
+          <span>Python,Node,Express,Django</span>
+        </div>
+        <div class="bar"><span style="width:80%"></span></div>
+        <div class="skill">
+          <span>Databases</span>
+          <span>SQL, MongoDB</span>
+        </div>
+        <div class="bar"><span style="width:70%"></span></div>
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section id="skills" class="container">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-desc">A quick overview of tech I use regularly.</p>
+    <div class="skill-grid">
+      <div class="card">
+        <h3>Frontend</h3>
+        <div class="tags">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Tailwind</span>
+        </div>
+      
+      </div>
+      
+      <div class="card">
+        <h3>Backend</h3>
+        <div class="tags">
+          <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Django</span><span class="tag">REST</span><span class="tag">Python</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Databases & Tools</h3>
+        <div class="tags">
+          <span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">Git/GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="t-item card">
+        <h4>B.Tech in Electronics and Communication Engineering — Dr. A. P. J. Abdul Kalam Technical University</h4>
+        <div class="meta">2012 – 2016 • CGPA: 7.5/10</div>
+        <p>Focus on algorithms, databases, and web development. Led a team project to build a course planner.</p>
+      </div>
+      <div class="t-item card">
+
+<h4>Intermediate (Science) — UP Board</h4>
+<div class="meta">2010 – 2012 • UP Board</div>
+<p>Subjects: Physics, Chemistry, Mathematics.</p>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="container">
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-grid">
+      <div class="card cert">
+        <h3>Completed a comprehensive Python Full Stack Development - Certifications </h3>
+        <div class="meta">2024 – 2025 • Ducat Training Instituate </div>
+      <br>
+        <a href="./img/Vivek Kumar Jha.pdf" aria-label="Verify certificate">Download Certificate →</a>
+      </div>
+      
+      <div class="card cert">
+        <h3></h3>
+         <h3>Completed a comprehensive SQL (Intermediate) — certifications </h3>
+        <div class="meta">2025 • HackerRank </div>
+        <br><br>
+        <a href="#">Download certificate →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-desc">A few things I've built recently.</p>
+    <div class="projects">
+      <article class="card p-card">
+        <div class="p-thumb">FlipMart — E‑commerce</div>
+        <h3>FlipMart (Customer & Seller)</h3>
+        <p>Responsive e‑commerce with product listings, cart, seller dashboard, and Razorpay integration (test mode).</p>
+        <div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">Node.js</span><span class="tag">SQL</span><span class="tag">Razorpay</span></div>
+        <!-- <div class="p-links">
+          <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
+          <a class="btn secondary" href="#" target="_blank" rel="noreferrer">Code</a>
+        </div> -->
+      </article>
+      <article class="card p-card">
+        <div class="p-thumb">Mindcubed Technology — Freelancing</div>
+        <h3>Mindcubed Technology (website)</h3>
+        <p>Landing page with animated hero, service sections, and contact form; integrated WhatsApp CTA.</p>
+        <div class="tags"><span class="tag">Tailwind</span><span class="tag">HTML/CSS/JS</span><span class="tag">Node.js</span><span class="tag">SQL</span></div>
+        <!-- <div class="p-links">
+          <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
+          <a class="btn secondary" href="#" target="_blank" rel="noreferrer">Code</a>
+        </div> -->
+      </article>
+      <article class="card p-card">
+        <div class="p-thumb">Task — Reminder</div>
+        <h3>Smart Reminder App</h3>
+        <p>PWA reminder app with localStorage, sound alerts, and install prompt for Android.</p>
+        <div class="tags"><span class="tag">PWA</span><span class="tag">HTML/CSS/JS</span><span class="tag">Node.js</span><span class="tag">SQL</span></div>
+        <!-- <div class="p-links">
+          <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
+          <a class="btn secondary" href="#" target="_blank" rel="noreferrer">Code</a>
+        </div> -->
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="card" style="padding:1.2rem">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="form-row">
+          <div class="control-group col-sm-6">
+            <input type="hidden" name="access_key" value="c5847bee-16f7-4c93-b9bf-d2fd9f51f39e">
+          </div>
+          </div>  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="int" name="number" placeholder="Your Number" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>     
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <span>© <span id="year"></span> Vivek Jha. All rights reserved.</span>
+      <div style="display:flex;gap:.8rem">
+        <a href="index.html">GitHub</a>
+        <a href="https://www.linkedin.com/in/er-vivek-jha-287109166/">LinkedIn</a>
+        <a href="https://x.com/home">Twitter</a>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </footer>
+</body>
+</html>

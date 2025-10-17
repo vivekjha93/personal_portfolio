@@ -1,0 +1,106 @@
+:root{
+      --bg: #0b0c10;
+      --elev: #111318;
+      --text: #e8eaed;
+      --muted: #b8c1cc;
+      --brand: #8ab4f8;
+      --accent: #4dd0e1;
+      --card: #0f1115;
+      --border: #1f2330;
+      --ring: rgba(138,180,248,.55);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    [data-theme="light"]{
+      --bg: #f7f9fc;
+      --elev: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #2563eb;
+      --accent: #0ea5e9;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --ring: rgba(59,130,246,.35);
+      --shadow: 0 10px 20px rgba(2,8,23,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:var(--bg);color:var(--text);scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1120px;margin-inline:auto;padding:0 1.25rem}
+    /* Navbar */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(16,18,24,.6);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:800;letter-spacing:.3px}
+    .brand .logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));color:white;font-weight:900;box-shadow:var(--shadow)}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{padding:.55rem .8rem;border-radius:10px;color:var(--muted)}
+    .nav-links a:hover,.nav-links a.active{color:var(--text);background:rgba(138,180,248,.12)}
+    .theme-toggle, .menu-toggle{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:12px;padding:.55rem .7rem;display:inline-flex;gap:.5rem;align-items:center;cursor:pointer}
+    .theme-toggle:focus-visible,.menu-toggle:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
+    .menu-toggle{display:none}
+    @media (max-width: 860px){
+      .menu-toggle{display:inline-flex}
+      .nav-links{position:fixed;inset:64px 0 auto 0;background:var(--bg);border-bottom:1px solid var(--border);padding:1rem 1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;transform:translateY(-120%);transition:transform .28s ease}
+      .nav-links.open{transform:translateY(0)}
+    }
+
+    /* Hero */
+    .hero{padding:70px 0 30px;border-bottom:1px solid var(--border);background:radial-gradient(1200px 600px at 20% -20%,rgba(138,180,248,.15),transparent 70%),radial-gradient(800px 400px at 110% 10%,rgba(77,208,225,.12),transparent 60%)}
+    .hero .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:2rem;align-items:center}
+    .title{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.2;margin:.2rem 0 .6rem}
+    .subtitle{color:var(--muted);font-size:1.05rem}
+    .cta{display:flex;gap:.8rem;margin-top:1.2rem}
+    .btn{border:1px solid var(--border);background:var(--elev);padding:.75rem 1rem;border-radius:14px;font-weight:600;box-shadow:var(--shadow)}
+    .btn.secondary{background:transparent}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);background:rgba(138,180,248,.1);color:var(--brand);padding:.45rem .65rem;border-radius:999px;font-size:1rem;font-weight:800}
+
+    /* Sections */
+    section{padding:70px 0;border-bottom:1px solid var(--border)}
+    .section-title{font-size:1.6rem;margin:0 0 1.2rem}
+    .section-desc{color:var(--muted);margin:-.6rem 0 1.6rem}
+
+    /* Skills */
+    .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1rem;box-shadow:var(--shadow)}
+    .skill{display:flex;justify-content:space-between;align-items:center;margin:.35rem 0}
+    .bar{height:8px;background:#0c0f14;border-radius:6px;overflow:hidden;border:1px solid var(--border)}
+    .bar>span{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--accent))}
+
+    /* Education Timeline */
+    .timeline{position:relative;margin-left:10px;padding-left:20px}
+    .timeline:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),var(--accent))}
+    .t-item{margin:1rem 0;padding-left:10px}
+    .t-item h4{margin:.1rem 0}
+    .t-item .meta{color:var(--muted);font-size:.95rem}
+
+    /* Certifications */
+    .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .cert a{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem .75rem;border:1px dashed var(--border);border-radius:12px}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .p-card{display:flex;flex-direction:column;gap:.7rem}
+    .p-thumb{aspect-ratio:16/9;border-radius:14px;border:1px solid var(--border);background:linear-gradient(135deg,#151924,#0f131c);display:grid;place-items:center;font-weight:700;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+    .tag{font-size:.78rem;border:1px solid var(--border);padding:.25rem .5rem;border-radius:999px;color:var(--muted)}
+    .p-links{display:flex;gap:.6rem;margin-top:auto}
+
+    /* Contact */
+    form{display:grid;gap:.8rem}
+    input,textarea{width:100%;padding:.8rem .9rem;border-radius:12px;border:1px solid var(--border);background:var(--elev);color:var(--text)}
+    input:focus,textarea:focus{outline:3px solid var(--ring);border-color:transparent}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+
+    /* Footer */
+    footer{padding:40px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .hero .grid{grid-template-columns:1fr}
+      .skill-grid,.cert-grid,.projects{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .skill-grid,.cert-grid,.projects{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+      .badge{font-size:.78rem}
+    }
